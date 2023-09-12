@@ -20,17 +20,21 @@
     <!-- Customize Tailwind classes  -->
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-                'text-primary': '#FFF',
-                'text-secondary': '#121212',
-              }
+            theme: {
+                extend: {
+                    backgroundImage: {
+                        'bg-team': "url(./images/team.png)",
+                    },
+
+                    colors: {
+                        'color-primary': '#F85559',
+                        clifford: '#da373d',
+                    }
+                }
             }
-          }
         }
-      </script>
+    </script>
+      <!-- custom css style  -->
       <style>
         .font-lato{
             font-family: 'Lato', sans-serif;
@@ -39,8 +43,51 @@
 </head>
 <body class="font-lato">
     <!-- header section start  -->
-    <header>
-
+    <header class="max-w-screen-xl mx-auto">
+        <!-- nav section starts here -->
+        <section class="lg:my-14">
+          <div class="navbar lg:bg-color-primary lg:px-5 h-[120px] rounded-full">
+              <!-- nav start -->
+              <div class="navbar-start hidden lg:block">
+                  <ul class="menu menu-horizontal px-1 text-lg text-[#fff] font-lato font-medium">
+                      <li><a>Home</a></li>
+                      <li><a>About Us</a></li>
+                      <li><a>Shop</a></li>
+                      <li><a>All Fruits</a></li>
+                  </ul>
+              </div>
+              <!-- nav center -->
+              <div class="navbar-center lg:flex gap-3">
+                  <img class="w-[50px]" src="./images/logo.png" alt="">
+                  <h3 class="text-4xl lg:text-[#fff] font-lato font-bold">Fruit Burst</h3>
+              </div>
+              <!-- nav end -->
+              <div class="navbar-end lg:pr-5 cursor-pointer ">
+                  <div class="border-2 bg-white rounded-full lg:px-7 hidden lg:block ">
+                      <input class="text-base text-[#12121266] border-0 outline-none p-3 font-lato rounded-full  "
+                          type="text" placeholder="Search here"> <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+              </div>
+              <!-- small device dropdown items -->
+              <div class="dropdown">
+                  <label tabindex="0" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                  </label>
+                  <ul tabindex="0"
+                      class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box text-xs">
+                      <li><a>Home</a></li>
+                      <li><a>About Us</a></li>
+                      <li><a>Shop</a></li>
+                      <li><a>All Fruits</a></li>
+                  </ul>
+              </div>
+          </div>
+      </section>
+      <!-- nav section ends here -->
     </header>
     <!-- main section start  -->
     <main>
